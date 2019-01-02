@@ -1,0 +1,67 @@
+{
+    "locations": [
+        {
+            "foursquareID": "4ac518d3f964a52077a720e3",
+            "title": "Churchill War Rooms",
+            "info": "Churchill's WWII underground offices.",
+            "latlng": {
+                "lat": 51.5021585,
+                "lng": -0.1293572
+            }
+        },
+        {
+            "foursquareID": "4abe4502f964a520558c20e3",
+            "title": "Buckingham Palace",
+            "info": "Home of the british Queen and state rooms.",
+            "latlng": {
+                "lat": 51.501364,
+                "lng": -0.14189
+            }
+        },
+        {
+            "foursquareID": "4ac518cef964a520f9a520e3",
+            "title": "Trafalgar Square",
+            "info": "a British naval victory in the Napoleonic Wars with France and Spain",
+            "latlng": {
+                "lat": 51.508039,
+                "lng": -0.128069
+            }
+        },
+        {
+            "foursquareID": "4ac518cef964a52021a620e3",
+            "title": "The London Eye",
+            "info": "Iconic reverside observation wheel",
+            "latlng": {
+                "lat": 51.503324,
+                "lng": -0.119543
+            }
+        },
+        {
+            "foursquareID": "4bd00abbcaff95215830cef0",
+            "title": "St James's Palace",
+            "info": "Red brick Tudor royal residence.",
+            "latlng": {
+                "lat": 51.5045855,
+                "lng": -0.1378269
+            }
+        },
+        {
+            "foursquareID": "4ac518cef964a520f6a520e3",
+            "title": "Big Ben",
+            "info": "London iconic national timepiece",
+            "latlng": {
+                "lat": 51.50072919999999,
+                "lng": -0.1246254
+            }
+        },
+        {
+            "foursquareID": "4ac518f3f964a520d3ae20e3",
+            "title": "Cardinal Place",
+            "info": "A retail and office development in London",
+            "latlng": {
+                "lat": 51.497006,
+                "lng": -0.141107
+            }
+        }
+    ]
+}
