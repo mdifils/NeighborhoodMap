@@ -16,7 +16,7 @@ body {
     overflow-x: hidden;
     transition: 0.5s;
     text-align: left;
-    padding-top: 40px;
+    padding-top: 50px;
     color: #818181;
 }
 
@@ -39,10 +39,10 @@ body {
 .open {
     position: relative;
     width: 100%;
-    height: 5%;
+    height: 7%;
     background-color: #111;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 5px;
 }
 
 #map {
@@ -50,7 +50,7 @@ body {
     bottom: 0;
     right: 0;
     width: 100%;
-    height: 95%;
+    height: 93%;
 }
 
 .sidebar a:hover,
@@ -84,7 +84,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    /* font-size: 20px; */
+    font-size: 25px;
     margin: 10px;
 }
 
