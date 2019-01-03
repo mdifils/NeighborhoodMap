@@ -13,7 +13,7 @@ body {
     width: 320px;
     height: 100%;
     background-color: #111;
-    overflow-x: hidden;
+    overflow-x: hidden; /*We don't need text to overflow into the map*/
     transition: 0.5s;
     text-align: left;
     padding-top: 50px;
@@ -22,7 +22,7 @@ body {
 
 .sidebar a,
 .open a {
-    text-decoration: none;
+    text-decoration: none; /* no need to underline links*/
     display: block;
     transition: 0.3s;
 }
@@ -33,7 +33,7 @@ body {
     right: 0;
     height: 100%;
     left: 320px;
-    transition: left .5s;
+    transition: left .5s; /*setting animation when openning and closing the sidebar*/
 }
 
 .open {
@@ -58,7 +58,7 @@ body {
 .sidebar a:hover,
 .open a:hover,
 .open span {
-    color: #f1f1f1;
+    color: #f1f1f1; /* making links to change color with mouseover event*/
 }
 
 #show,
@@ -90,6 +90,7 @@ body {
     margin: 10px;
 }
 
+/*On small screen sidebar will be closed by default*/
 @media screen and (max-width: 768px) {
     .main {
         left: 0;
