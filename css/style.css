@@ -98,4 +98,8 @@ body {
     .sidebar {
         width: 0;
     }
+    .open {
+        vertical-align: text-top;
+        padding-bottom: 15px;
+    }
 }
