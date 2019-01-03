@@ -49,6 +49,7 @@ Small screen view.
 
 ![Mobile view](img/picture4.png)
 ![Mobile view](img/picture5.png)
+![mobile view](img/picture6.png)
 
 ## Instructions
 
