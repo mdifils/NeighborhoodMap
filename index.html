@@ -9,34 +9,42 @@
 </head>
 <body>
 
-    <div class="container">
-        <div class="options-box">
-            <div>
-              <input id="show-listings" type="button" value="Show Markers" data-bind="click: showMarkers">
-              <input id="hide-listings" type="button" value="Hide Markers" data-bind="click: hideMarkers">
-            </div>
-            <hr>
-            <!-- Filter -->
-            <div>
-              <input id="filter-marker-text" type="text" placeholder="Filter markers here!" data-bind="value: pattern">
-              <input id="filter-marker" type="button" value="Filter" data-bind="click: filterMarkers">
-            <hr>
-              <p>List of Markers</p>
-              <ul data-bind="foreach: filteredList">
-                  <li data-bind="text: title, click: $parent.openMarkerInfo"></li>
-              </ul>
-            </div>
-            <hr>
-            <!-- If isVisible === true, additional location info will be displayed here -->
-            <div id="foursquare" data-bind="visible: isVisible">
-                <img data-bind="attr:{src: imgUrl}" alt="Sorry photos not found">
-                <p><b>Name :</b> <span data-bind="text: venueName"></span></p>
-                <p><b>Adress :</b> <span data-bind="text: venueAddress"></span></p>
-                <p><b>Likes :</b> <span data-bind="text: venueLikes"></span></p>
-                <p><b>Rating :</b> <span data-bind="text: venueRating"></span></p>
-            </div>
-            <!-- In case of error, it will be displayed in this div -->
-            <div id="error"></div>
+    <div class="sidebar" id="sidebar">
+        <a id="close" href="javascript:void(0)" onclick="closeNav()">&times;</a>
+
+        <div>
+            <input type="button" value="Show Markers" data-bind="click: showMarkers" id="show">
+            <input type="button" value="Hide Markers" data-bind="click: hideMarkers" id="hide">
+        </div>
+        <br>
+        <!-- Filter -->
+        <div>
+            <input type="text" placeholder="Filter markers here!" data-bind="value: pattern" id="search">
+            <input type="button" value="Filter" data-bind="click: filterMarkers" id="filter">
+        </div>
+        <div>
+            <p>List of Markers</p>
+            <ul data-bind="foreach: filteredList">
+                <li ><a href="#" data-bind="text: title, click: $parent.openMarkerInfo"></a></li>
+            </ul>
+        </div>
+        <hr>
+        <!-- If isVisible === true, additional location info will be displayed here -->
+        <div id="foursquare" data-bind="visible: isVisible">
+            <img data-bind="attr:{src: imgUrl}" alt="Sorry photos not found">
+            <p><b>Name :</b> <span data-bind="text: venueName"></span></p>
+            <p><b>Adress :</b> <span data-bind="text: venueAddress"></span></p>
+            <p><b>Likes :</b> <span data-bind="text: venueLikes"></span></p>
+            <p><b>Rating :</b> <span data-bind="text: venueRating"></span></p>
+        </div>
+        <!-- In case of error, it will be displayed in this div -->
+        <div id="error"></div>
+    </div>
+    <div id="main" class="main">
+        <div class="open">
+            <!-- <span id="open" onclick="openNav()">&#9776;</span> -->
+            <a id="open" href="javascript:void(0)" onclick="openNav()">&#9776;</a>
+            <span >Big Ben Neighborhood Map</span>
         </div>
         <!-- The map will be displayed here -->
         <div id="map"></div>

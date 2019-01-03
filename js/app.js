@@ -23,7 +23,7 @@ var imgUrl = ko.observable('');
 /**
 * @description Represents a location or point of interest
 * @constructor
-* @param {string} data - An object with the following properties: title,
+* @param {json} data - An object with the following properties: title,
 * foursquareID (for that location), info (short description) and latlng (latitude, longitude)
 */
 var Place = function(data) {
@@ -37,7 +37,7 @@ var Place = function(data) {
 };
 // ----------------------------------------------------------------------------
 // ------------------------ UTILITY FUNCTIONS ---------------------------------
-// I'M GOING TO USE 'populateInfoWindow' FUNCTION DEFINED IN THE COURSE
+//
 // This function populates the infowindow when the marker is clicked.
 // We'll only allow one infowindow which will open at the marker that is clicked,
 // and populate based on that markers position.
@@ -56,8 +56,7 @@ function populateInfoWindow(marker, infowindow) {
         // Make sure the marker property is cleared if the infowindow is closed.
         infowindow.addListener('closeclick', function() {
             infowindow.marker = null;
-            // THIS IS MY CONTRIBUTION TO THIS FUNCTION IN ORDER HIDE ADDITIONAL
-            // LOCATION INFO DISPLAYED IN THE DOM ALONG SIDE WITH MARKER infowindow
+            // Hide additional information when closing the infowindow
             isVisible(false);
         });
     }
@@ -81,6 +80,16 @@ function getLocationDetails(place) {
     }).fail(() => $('#error').html(`<b>Failed to fetch location details with status:</b> ${data.meta.code}`));
 
     isVisible(true);
+}
+// Close and open the sidebar
+function openNav() {
+    document.getElementById("sidebar").style.width = "320px";
+    document.getElementById("main").style.left = "320px";
+}
+
+function closeNav() {
+    document.getElementById("sidebar").style.width = "0";
+    document.getElementById("main").style.left= "0";
 }
 // ----------------------------------------------------------------------------
 // This is the callback function for GOOGLE MAP API that will display the map,
@@ -129,6 +138,7 @@ function initMap() {
             }
         },
         error: function(jqXHR, textStatus, error) {
+            // Letting the user know about the error
             $('#error').html(`<b>Failed to download locations data with status:</b> ${jqXHR.status}`);
         }
     });
@@ -155,6 +165,7 @@ var ViewModel = function() {
             return false;
         });
     });
+    console.log(this.filteredList());
     // Clicking any item in the list will open infowindow on the marker and
     // display additional details in the DOM.
     this.openMarkerInfo = function(place) {
@@ -164,10 +175,11 @@ var ViewModel = function() {
     // filtering the list also filters the markers on the map.
     this.filterMarkers = () => {
         placeMarkers().forEach(function(item) {
-            if (!this.filteredList().includes(item)) {
-                item.marker.setVisible(false);
-            }
-        }, this);
+            item.marker.setVisible(false);
+        });
+        self.filteredList().forEach(function(item) {
+            item.marker.setVisible(true);
+        })
     };
     // Hiding everything in the list and also every marker on the map.
     this.hideMarkers = () => {
