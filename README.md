@@ -34,6 +34,21 @@ the webpage.
 
 ## Preview
 
+All markers appear by default, then you can hide them all, make them visible
+again and filter them.
+![homepage](img/picture1.png)
+
+Clicking on a marker or an item in the list display an information window on the
+map and some additional information on the sidebar.
+![location info](img/picture2.png)
+
+Filtering the list filter markers as well on the map.
+![Filtering](img/picture3.png)
+
+Small screen view.
+
+![Mobile view](img/picture4.png)
+![Mobile view](img/picture5.png)
 
 ## Instructions
 

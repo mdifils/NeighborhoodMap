@@ -106,7 +106,7 @@ function initMap() {
                 // Defining the map to be displayed.
                 map = new google.maps.Map(document.getElementById('map'), {
                     center: result.locations[0].latlng,
-                    zoom: 15
+                    zoom: 14
                 });
 
                 var largeInfowindow = new google.maps.InfoWindow();
