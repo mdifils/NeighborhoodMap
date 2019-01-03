@@ -54,3 +54,6 @@ Small screen view.
 
 * Download the files or clone this [repository](https://github.com/mdifils/NeighborhoodMap).
 * Open the file index.html in your browser and enjoy.
+* Since AJAX request to local file system isn't working in Chrome, there is no
+need to use locations.json file. Instead, the program will be downloading that file
+from a server using Ajax.
