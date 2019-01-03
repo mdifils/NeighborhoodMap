@@ -13,14 +13,14 @@
         <a id="close" href="javascript:void(0)" onclick="closeNav()">&times;</a>
 
         <div>
-            <input type="button" value="Show Markers" data-bind="click: showMarkers" id="show">
-            <input type="button" value="Hide Markers" data-bind="click: hideMarkers" id="hide">
+            <button type="button" data-bind="click: showMarkers" id="show"><b>Show All Markers</b></button>
+            <button type="button" data-bind="click: hideMarkers" id="hide"><b>Hide All Markers</b></button>
         </div>
         <br>
         <!-- Filter -->
         <div>
             <input type="text" placeholder="Filter markers here!" data-bind="value: pattern" id="search">
-            <input type="button" value="Filter" data-bind="click: filterMarkers" id="filter">
+            <button type="button" id="filter" data-bind="click: filterMarkers"><b>Filter</b></button>
         </div>
         <div>
             <p>List of Markers</p>
@@ -44,7 +44,7 @@
         <div class="open">
             <!-- <span id="open" onclick="openNav()">&#9776;</span> -->
             <a id="open" href="javascript:void(0)" onclick="openNav()">&#9776;</a>
-            <span >Big Ben Neighborhood Map</span>
+            <span><h2>Big Ben Neighborhood Map</h2></span>
         </div>
         <!-- The map will be displayed here -->
         <div id="map"></div>
