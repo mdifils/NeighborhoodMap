@@ -56,4 +56,4 @@ Small screen view.
 * Download the files or clone this [repository](https://github.com/mdifils/NeighborhoodMap).
 * Open the file index.html in your browser and enjoy.
 * Since AJAX request to local file system isn't working in Chrome, there is no
-need to use locations.json file. Instead, I'm doing ajax request to download it from a server. But because of rate limiting, I remove my secret_key. Therefore, you can either ajax request to local file system using firefox browser or create an account and use this [API](https://jsonbin.io/).
+need to use locations.json file. Instead, I'm doing ajax request to download it from a server. But because of rate limiting, I remove my secret_key. Therefore, you can either make ajax request to local file system using firefox browser or create an account and use this [API](https://jsonbin.io/) to store locations.json file. You'll be given a url and a secret_key to use in your ajax request. 
