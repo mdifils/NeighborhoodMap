@@ -1,6 +1,6 @@
 // ------------------------ Foursquare credentials -------------------------- //
-var client_id='UVJHCXUXK4W5NJ013H4B5PSF33H1IKE5PHARGG5JQEI5D25P';             //
-var client_secret='CEZ5YGFGJYZQTLWJH4DOV0RDBIAP3K2EFEJDXLOPQFKYEIZ2';         //
+var client_id='FOURSQUARE_CLIENTID';             //
+var client_secret='FOURSQUARE_CLIENT_SECRET';         //
 // -------------------------------------------------------------------------- //
 // ---------------------- GLOBAL VARIABLES ----------------------------------
 // Creating a map variable
@@ -99,7 +99,7 @@ function closeNav() {
 function initMap() {
     $.ajax({
         url: 'https://api.jsonbin.io/b/5c2ac7e5412d482eae58a496',
-        headers: {"secret-key": "$2a$10$n2PrHoiLcOiwcFwGyfa0tO97tFdd5M8xgAz8A.iyKIimodXzKKp6O"},
+        headers: {"secret-key": "SECRET_KEY"},
         dataType: "json",
         success: function (result, textStatus, jqXHR) {
             if (jqXHR.status === 200) {
