@@ -23,7 +23,7 @@ contain the pattern you type enter in that box will appear.
 The following technologies have been used in order to provide you all the above
 functionalities:
 
-* [Google Maps API](https://developers.google.com/maps/) : To load the map on my
+* [Google Maps API](https://developers.google.com/maps/) : To load the map on my webpage
 and to create markers at points of interest.
 * [Knockout](https://knockoutjs.com/index.html) : To handle the list, the filter
 and every dynamic change in the view (UI).
@@ -56,5 +56,4 @@ Small screen view.
 * Download the files or clone this [repository](https://github.com/mdifils/NeighborhoodMap).
 * Open the file index.html in your browser and enjoy.
 * Since AJAX request to local file system isn't working in Chrome, there is no
-need to use locations.json file. Instead, the program will be downloading that file
-from a server using Ajax.
+need to use locations.json file. Instead, I'm doing ajax request to download it from a server. But because of rate limiting, I remove my secret_key. Therefore, you can either ajax request to local file system using firefox browser or create an account and use this [API](https://jsonbin.io/).
